@@ -1,0 +1,52 @@
+{
+  "name": "create-mcp-server",
+  "version": "0.1.0",
+  "description": "A scaffold CLI for creating MCP servers",
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "create-mcp-server": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alcanivorax/create-mcp-server.git"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "scaffold",
+    "cli",
+    "generator",
+    "create",
+    "template"
+  ],
+  "author": "alcanivorax",
+  "license": "MIT",
+  "packageManager": "pnpm@10.28.0",
+  "devDependencies": {
+    "@types/node": "^25.0.10",
+    "@typescript-eslint/eslint-plugin": "^8.53.1",
+    "@typescript-eslint/parser": "^8.53.1",
+    "eslint": "^9.39.2",
+    "prettier": "^3.8.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
