@@ -1,5 +1,5 @@
 {
-  "name": "__PROJECT_NAME__",
+  "name": "{{projectName}}",
   "version": "0.1.0",
   "description": "",
   "private": true,

@@ -1,5 +1,5 @@
 {
-  "name": "__PROJECT_NAME__",
+  "name": "{{projectName}}",
   "version": "0.1.0",
   "description": "",
   "private": true,
@@ -11,7 +11,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.0.0",
+    "server": "link:@modelcontextprotocol/sdk/server",
     "zod": "^3.22.0"
   },
   "devDependencies": {

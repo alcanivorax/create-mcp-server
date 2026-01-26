@@ -2,7 +2,7 @@ import { McpServer } from '@modelcontextprotocol/sdk/server'
 
 export function createServer() {
   const server = new McpServer({
-    name: '__PROJECT_NAME__',
+    name: '{{projectName}}',
     version: '0.1.0',
   })
 

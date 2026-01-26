@@ -10,7 +10,7 @@ export type TemplateMeta = {
   id: string
   display: string
 
-  language: 'typescript' | 'pythong' | 'go'
+  language: 'typescript' | 'python' | 'go'
   runtime: string
   transport: 'stdio' | 'http'
 

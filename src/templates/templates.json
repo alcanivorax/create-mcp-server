@@ -1,0 +1,98 @@
+[
+  {
+    "id": "node-ts-stdio",
+    "display": "Node.js + TypeScript (stdio)",
+    "language": "typescript",
+    "runtime": "node",
+    "transport": "stdio",
+    "supports": {
+      "exampleTool": true
+    },
+    "commands": {
+      "install": "pnpm install",
+      "dev": "pnpm dev",
+      "build": "pnpm build",
+      "start": "pnpm start"
+    },
+    "placeholders": ["projectName"]
+  },
+  {
+    "id": "node-ts-http",
+    "display": "Node.js + TypeScript (http)",
+    "language": "typescript",
+    "runtime": "node",
+    "transport": "http",
+    "supports": {
+      "exampleTool": true
+    },
+    "commands": {
+      "install": "pnpm install",
+      "dev": "pnpm dev",
+      "build": "pnpm build",
+      "start": "pnpm start"
+    },
+    "placeholders": ["projectName"]
+  },
+  {
+    "id": "python-stdio",
+    "display": "Python (stdio)",
+    "language": "python",
+    "runtime": "python",
+    "transport": "stdio",
+    "supports": {
+      "exampleTool": true
+    },
+    "commands": {
+      "install": "pip install -r requirements.txt",
+      "start": "python src/server.py"
+    },
+    "placeholders": ["projectName"]
+  },
+  {
+    "id": "python-http",
+    "display": "Python (http)",
+    "language": "python",
+    "runtime": "python",
+    "transport": "http",
+    "supports": {
+      "exampleTool": true
+    },
+    "commands": {
+      "install": "pip install -r requirements.txt",
+      "start": "python src/server.py"
+    },
+    "placeholders": ["projectName"]
+  },
+  {
+    "id": "go-stdio",
+    "display": "Go (stdio)",
+    "language": "go",
+    "runtime": "go",
+    "transport": "stdio",
+    "supports": {
+      "exampleTool": true
+    },
+    "commands": {
+      "install": "go mod tidy",
+      "build": "go build ./...",
+      "start": "go run ."
+    },
+    "placeholders": ["projectName"]
+  },
+  {
+    "id": "go-http",
+    "display": "Go (http)",
+    "language": "go",
+    "runtime": "go",
+    "transport": "http",
+    "supports": {
+      "exampleTool": true
+    },
+    "commands": {
+      "install": "go mod tidy",
+      "build": "go build ./...",
+      "start": "go run ."
+    },
+    "placeholders": ["projectName"]
+  }
+]
