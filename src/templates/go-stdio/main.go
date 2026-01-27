@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	server := mcp.NewServer("__PROJECT_NAME__", "0.1.0")
+	server := mcp.NewServer("{{projectName}}", "0.1.0")
 
 	// Add tools here
 	// server.Tool("example", func(args map[string]any) any {

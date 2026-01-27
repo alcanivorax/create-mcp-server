@@ -18,7 +18,7 @@ export type TemplateMeta = {
     exampleTool: boolean
   }
 
-  commands?: {
+  commands: {
     install?: string
     dev?: string
     build?: string

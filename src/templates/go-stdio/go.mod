@@ -1,4 +1,4 @@
-module __PROJECT_NAME__
+module {{projectName}}
 
 go 1.22
 

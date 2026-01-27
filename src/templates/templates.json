@@ -9,10 +9,10 @@
       "exampleTool": true
     },
     "commands": {
-      "install": "pnpm install",
-      "dev": "pnpm dev",
-      "build": "pnpm build",
-      "start": "pnpm start"
+      "install": "{pm} install",
+      "dev": "{pm} run dev",
+      "build": "{pm} run build",
+      "start": "{pm} start"
     },
     "placeholders": ["projectName"]
   },
@@ -26,10 +26,10 @@
       "exampleTool": true
     },
     "commands": {
-      "install": "pnpm install",
-      "dev": "pnpm dev",
-      "build": "pnpm build",
-      "start": "pnpm start"
+      "install": "{pm} install",
+      "dev": "{pm} run dev",
+      "build": "{pm} run build",
+      "start": "{pm} start"
     },
     "placeholders": ["projectName"]
   },
@@ -69,22 +69,6 @@
     "language": "go",
     "runtime": "go",
     "transport": "stdio",
-    "supports": {
-      "exampleTool": true
-    },
-    "commands": {
-      "install": "go mod tidy",
-      "build": "go build ./...",
-      "start": "go run ."
-    },
-    "placeholders": ["projectName"]
-  },
-  {
-    "id": "go-http",
-    "display": "Go (http)",
-    "language": "go",
-    "runtime": "go",
-    "transport": "http",
     "supports": {
       "exampleTool": true
     },

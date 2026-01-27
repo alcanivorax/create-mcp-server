@@ -1,5 +1,5 @@
 [project]
-name = "__PROJECT_NAME__"
+name = "{{projectName}}"
 version = "0.1.0"
 description = "MCP server"
 requires-python = ">=3.9"

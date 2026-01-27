@@ -51,24 +51,42 @@ export async function promptUser(): Promise<Answers> {
     },
   })
 
-  const transport = await select<Answers['transport']>({
-    message: chalk.bold('🌐 Select transport method:'),
-    choices: [
-      {
-        name: `${chalk.magenta('stdio')} ${chalk.dim('- Standard input/output')}`,
-        value: 'stdio',
-        description: 'For CLI tools and local integrations',
+  let transport: Answers['transport']
+
+  if (language === 'python' || language === 'typescript') {
+    transport = await select<Answers['transport']>({
+      message: chalk.bold('🌐 Select transport method:'),
+      choices: [
+        {
+          name: `${chalk.magenta('stdio')} ${chalk.dim('- Standard input/output')}`,
+          value: 'stdio',
+          description: 'For CLI tools and local integrations',
+        },
+        {
+          name: `${chalk.blue('http')} ${chalk.dim('- HTTP server')}`,
+          value: 'http',
+          description: 'For remote access and web services',
+        },
+      ],
+      theme: {
+        prefix: chalk.cyan('›'),
       },
-      {
-        name: `${chalk.blue('http')} ${chalk.dim('- HTTP server')}`,
-        value: 'http',
-        description: 'For remote access and web services',
+    })
+  } else {
+    transport = await select<Answers['transport']>({
+      message: chalk.bold('🌐 Select transport method:'),
+      choices: [
+        {
+          name: `${chalk.magenta('stdio')} ${chalk.dim('- Standard input/output')}`,
+          value: 'stdio',
+          description: 'For CLI tools and local integrations',
+        },
+      ],
+      theme: {
+        prefix: chalk.cyan('›'),
       },
-    ],
-    theme: {
-      prefix: chalk.cyan('›'),
-    },
-  })
+    })
+  }
 
   let packageManager: Answers['packageManager'] = undefined
 
@@ -77,17 +95,17 @@ export async function promptUser(): Promise<Answers> {
       message: chalk.bold('📦 Choose package manager:'),
       choices: [
         {
-          name: `${chalk.yellow('pnpm')} ${chalk.dim('- Fast, disk-efficient')}`,
+          name: `${chalk.yellow('pnpm')}`,
           value: 'pnpm',
           description: 'Recommended: saves disk space',
         },
         {
-          name: `${chalk.red('npm')} ${chalk.dim('- Default Node.js manager')}`,
+          name: `${chalk.red('npm')}`,
           value: 'npm',
           description: 'Built into Node.js',
         },
         {
-          name: `${chalk.blue('yarn')} ${chalk.dim('- Feature-rich alternative')}`,
+          name: `${chalk.blue('yarn')}`,
           value: 'yarn',
           description: 'Popular in many projects',
         },
