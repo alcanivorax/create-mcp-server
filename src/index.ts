@@ -13,7 +13,6 @@ async function run() {
     await postInstall(template, answers)
   } catch (err) {
     console.error('\n❌ create-mcp-server failed\n')
-    console.error(err instanceof Error ? err.message : err) // dev only
     process.exit(1)
   }
 }

@@ -24,6 +24,7 @@
   },
   "include": ["src"],
   "exclude": [
+    "src/templates",
     "**/__tests__/**",
     "**/__test__/**",
     "**/*.test.ts",

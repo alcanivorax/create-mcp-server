@@ -1,2 +1,16 @@
+# binaries
 bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# test binaries
+*.test
+
+# coverage
+*.out
+
+# environment files
 .env

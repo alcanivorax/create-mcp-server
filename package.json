@@ -1,7 +1,7 @@
 {
   "name": "create-mcp-server",
   "version": "0.1.0",
-  "description": "A scaffold CLI for creating MCP servers",
+  "description": "A CLI to scaffold MCP servers in Node.js, Python, and more — with stdio and HTTP transports ready to go.",
   "type": "module",
   "main": "./dist/index.js",
   "bin": {
@@ -9,12 +9,13 @@
   },
   "scripts": {
     "dev": "tsx src/index.ts",
-    "build": "tsc",
+    "build": "tsc && cp -r src/templates dist/",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "postBuild": "chmod +x dist/index.js"
   },
   "files": [
     "dist",
