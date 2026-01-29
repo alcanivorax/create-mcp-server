@@ -1,4 +1,4 @@
-# create-mcp-server
+<!-- # create-mcp-server
 
 Scaffold a **Model Context Protocol (MCP)** server in seconds.
 
@@ -162,4 +162,4 @@ Feel free to open an issue or PR.
 
 ## 📄 License
 
-MIT
+MIT -->
