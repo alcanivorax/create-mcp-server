@@ -1,4 +1,4 @@
-# **PROJECT_NAME**
+# **{{projectName}}**
 
 A minimal MCP server implemented in Python using stdio transport.
 
