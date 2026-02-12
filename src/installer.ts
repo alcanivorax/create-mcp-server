@@ -42,7 +42,7 @@ function initGit(dir: string) {
     } else {
       spinner.warn(chalk.yellow('Git repository initialization skipped'))
     }
-  } catch (error) {
+  } catch {
     spinner.fail(chalk.red('Failed to initialize git'))
     console.log(chalk.dim('  ↳ Make sure git is installed'))
   }

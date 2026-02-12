@@ -51,42 +51,42 @@ export async function promptUser(): Promise<Answers> {
     },
   })
 
-  let transport: Answers['transport']
+  // let transport: Answers['transport']
 
-  if (language === 'python' || language === 'typescript') {
-    transport = await select<Answers['transport']>({
-      message: chalk.bold('🌐 Select transport method:'),
-      choices: [
-        {
-          name: `${chalk.magenta('stdio')} ${chalk.dim('- Standard input/output')}`,
-          value: 'stdio',
-          description: 'For CLI tools and local integrations',
-        },
-        {
-          name: `${chalk.blue('http')} ${chalk.dim('- HTTP server')}`,
-          value: 'http',
-          description: 'For remote access and web services',
-        },
-      ],
-      theme: {
-        prefix: chalk.cyan('›'),
+  // if (language === 'python' || language === 'typescript') {
+  //   transport = await select<Answers['transport']>({
+  //     message: chalk.bold('🌐 Select transport method:'),
+  //     choices: [
+  //       {
+  //         name: `${chalk.magenta('stdio')} ${chalk.dim('- Standard input/output')}`,
+  //         value: 'stdio',
+  //         description: 'For CLI tools and local integrations',
+  //       },
+  //       {
+  //         name: `${chalk.blue('http')} ${chalk.dim('- HTTP server')}`,
+  //         value: 'http',
+  //         description: 'For remote access and web services',
+  //       },
+  //     ],
+  //     theme: {
+  //       prefix: chalk.cyan('›'),
+  //     },
+  //   })
+  // } else {
+  const transport = await select<Answers['transport']>({
+    message: chalk.bold('🌐 Select transport method:'),
+    choices: [
+      {
+        name: `${chalk.magenta('stdio')} ${chalk.dim('- Standard input/output')}`,
+        value: 'stdio',
+        description: 'For CLI tools and local integrations',
       },
-    })
-  } else {
-    transport = await select<Answers['transport']>({
-      message: chalk.bold('🌐 Select transport method:'),
-      choices: [
-        {
-          name: `${chalk.magenta('stdio')} ${chalk.dim('- Standard input/output')}`,
-          value: 'stdio',
-          description: 'For CLI tools and local integrations',
-        },
-      ],
-      theme: {
-        prefix: chalk.cyan('›'),
-      },
-    })
-  }
+    ],
+    theme: {
+      prefix: chalk.cyan('›'),
+    },
+  })
+  // }
 
   let packageManager: Answers['packageManager'] = undefined
 

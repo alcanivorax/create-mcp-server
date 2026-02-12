@@ -11,7 +11,7 @@ async function run() {
     const template = await selectTemplate(answers)
     await renderTemplate(template, answers)
     await postInstall(template, answers)
-  } catch (err) {
+  } catch {
     console.error('\n❌ create-mcp-server failed\n')
     process.exit(1)
   }
